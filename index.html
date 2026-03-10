@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Happy Birthday Cutu </title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/birthday-app.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments"> </span><br />
+				<span class="space"/><span class="comments"> --------- Happiest Birthday to Hatib Khalil ---------</span><br />
+				<span class="comments"> </span><br />
+				<span class="comments"> </span><br />
+				<span class="space"/><span class="comments"> today, the 11th of the march, marks your birthday.</span><br />
+				<span class="space"/><span class="comments"> so i created a page to celebrate this cutu day <span class="string">(js like u (☆∀☆))</span><br />
+				<span class="space"/><span class="comments"> this will show you a script (〝⌒∇⌒〝) </span><br />
+				<span class="space"/><span class="comments"> </span><br />
+				sending <span class="keyword">virtual love & hugs ur way</span> <span class="string"> cutu patootu (uωu*) </span> <br />
+				<span class="comments"> march , when the bells rang, your age increased </span><br />
+					<span class="space"/><span class="comments"> </span><br />
+				 <span class="keyword"> </span>  <br />
+
+				 <span class="keyword"> <span class="string">2006-03-11 
+				 175320:00:00 </span> <br />
+				
+				<span class="string">  12:00:00 </span> </br>
+					
+				</br>
+				<span class="comments"> A soul so soft, like petals sleep,</span>
+				<br />
+				<span class="comments"> In silence where the dreamers weep.</span>
+				<br />
+				<span class="comments"> He walks in light, not made but born,</span>
+				<br />
+				<span class="comments"> A dawn disguised in human form.</span>
+				<br />
+				<span class="comments"> His smile - a balm, his laugh - a breeze,</span>
+				<br />
+				<span class="comments"> He calms the storms with quiet ease.</span>
+				<br />
+				<span class="comments"> And though apart, his warmth i feel - </span>
+				<br />
+				<span class="comments"> A beauty deep, a light so real. </span>
+				<br />
+				
+
+					<span class="space"/><span class="comments"> </span><br />
+
+				
+				<span class="comments"> i wish you : </span><br />
+				
+				<span class="comments"> happiness,</span><br />
+                
+				<span class="comments"> strength,</span><br />
+                
+				<span class="comments"> more awesome things,</span><br />
+               
+			    <span class="comments"> and everything you wish can be achieved.</span><br />
+				<br />
+				<span class="comments"> the last thing i want to say, boring and ordinary, is:</span><br />
+				<span class="keyword"> Happy Birthday darling (≧▽≦) !!!</span>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+						    you defy stars from:
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						'' Bahaaron ko bhi naaz jis phool par tha<br>
+                         Wahi phool ham ne chuna gulsitan se ''<br/>
+						<div class="signature"> Hoorain Akram (o≧▽≦)ﾉ
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+	
+		const together = new Date(2026-3-11);
+		together.setFullYear(2006, 2, 11);
+		together.setHours(12);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			const msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			document.getElementById("code").style.display = "none";
+			const copyright = document.getElementById("copyright");
+			copyright.style.position = "absolute";
+			copyright.style.bottom = "10px";
+		    document.execCommand("stop");
+		} else {
+			// Wait for BirthdayApp to initialize
+			document.addEventListener('DOMContentLoaded', function() {
+				setTimeout(() => {
+					if (window.birthdayApp) {
+						window.birthdayApp.startHeartAnimation();
+					}
+				}, 5000);
+
+				// Start time counter
+				if (window.birthdayApp) {
+					window.birthdayApp.timeElapse(together);
+					setInterval(() => {
+						window.birthdayApp.timeElapse(together);
+					}, 500);
+
+					window.birthdayApp.adjustCodePosition();
+					window.birthdayApp.typewriter(document.getElementById("code"));
+				}
+			});
+		}
+	</script>
+</body>
+</html>
